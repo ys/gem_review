@@ -1,3 +1,3 @@
-GemRate::Application.routes.draw do
+GemReview::Application.routes.draw do
   mount Api::GemReview => '/'
 end

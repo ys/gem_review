@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-GemRate::Application.load_tasks
+GemReview::Application.load_tasks
