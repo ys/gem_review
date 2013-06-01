@@ -14,6 +14,11 @@ gem "jquery-rails"
 gem "grape", github: "intridea/grape"
 gem "active_model_serializers"
 
+gem "gems"
+
+gem "slim"
+gem "flatui-rails"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem "sdoc", require: false

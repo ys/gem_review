@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20130601072033) do
 
   create_table "reviews", force: true do |t|
     t.string   "title"
-    t.string   "text"
+    t.text     "text"
     t.string   "gem_name"
     t.datetime "created_at"
     t.datetime "updated_at"

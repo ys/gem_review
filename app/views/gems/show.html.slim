@@ -1,0 +1,14 @@
+- content_for :links do
+  ul.nav
+    li= link_to "rubygems", "http://rubygems.org/gems/#{@gem_name}"
+- content_for :title do
+  h1.ruby
+    = @gem_name.capitalize
+h2
+  small Reviews
+= render @reviews
+
+= form_for @review, url: "/#{@gem_name}/reviews" do |f|
+  .control-group.error
+    = f.text_area :text, class: "error"
+  = f.submit "Review", class: "btn btn-large btn-block btn-danger"

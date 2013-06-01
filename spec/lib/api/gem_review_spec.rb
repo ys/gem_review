@@ -6,9 +6,9 @@ end
 
 describe Api::GemReview do
 
-  describe "GET /rails/reviews" do
+  describe "GET /gems/rails/reviews" do
     it "returns the last 10 reviews" do
-      get "rails/reviews"
+      get "gems/rails/reviews"
       expect(last_response.status).to eq 200
       expect(last_response.body).to have_json_path("reviews")
     end
@@ -24,10 +24,10 @@ describe Api::GemReview do
     end
   end
 
-  describe "POST /rails/reviews" do
+  describe "POST /gems/rails/reviews" do
     it "creates a review" do
       expect do
-        post "rails/reviews", { text: "I <3 Rails" }
+        post "gems/rails/reviews", { text: "I <3 Rails" }
       end.to change{ Review.count }.by(1)
     end
   end

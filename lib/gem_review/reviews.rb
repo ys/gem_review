@@ -1,5 +1,9 @@
 module GemReview
   class Reviews
+    include Enumerable
+
+    delegate :each, to: :_reviews
+
     def initialize(gem_name)
       @gem_name = gem_name
     end
@@ -10,6 +14,10 @@ module GemReview
 
     def to_json
       ActiveModel::ArraySerializer.new _reviews, root: :reviews
+    end
+
+    def to_ary
+      _reviews
     end
 
     def _reviews

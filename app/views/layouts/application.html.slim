@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= GemReview
+    = stylesheet_link_tag("application", media: "all")
+    = javascript_include_tag("application")
+    = csrf_meta_tags
+  body
+    .container
+      .palette.palette-pomegranate
+        h1 Gems Reviews
+        h2 Give feedback on all your favorites gems
+      = yield :title
+      .navbar.navbar-inverse
+        .navbar-inner
+          .container
+            = yield :links
+
+      = yield
+
