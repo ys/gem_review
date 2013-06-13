@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def create
-    ::GemReview::Reviews.new(gem_name).review(review_text)
+    Reviews.new(gem_name).review(review_text)
     redirect_to gem_path(gem_name)
   end
 
